@@ -144,4 +144,17 @@ TE.wait(1000, false)
   .then( TE.enterResponse.bind(TE, 'finalizing...') )
   .then( TE.wait.bind(TE, 2000) )
   .then( TE.enterResponse.bind(TE, 'I am a self-proclaimed geek. My powers? Am good at parsing jq, awesome in bash and the best, I make terrible decisions and can not keep my mouth shut. I know Bash, Python, C++, C#, HTML, CSS and am on the verge of learning Kotlin.') )
-  .then( TE.reset.bind(TE) );
+.then( TE.wait.bind(TE, 2000) )
+.then( TE.enterInput.bind(TE, 'cat bash_programs.txt') )
+  .then( TE.enterCommand.bind( TE ) )
+  .then( TE.enterResponse.bind(TE, 'The Bash Programs I am Prous of :') )
+  .then( TE.wait.bind(TE, 2000) )
+  .then( TE.enterResponse.bind(TE, '- Get Your Grub Back (Grub Repair)') )
+  .then( TE.wait.bind(TE, 600) )
+  .then( TE.enterResponse.bind(TE, '- John Doe (Identity Generator) ') )
+  .then( TE.wait.bind(TE, 600) )
+  .then( TE.enterResponse.bind(TE, '- Cruncher (A slow way to kill a pc) ') )
+.then( TE.wait.bind(TE, 600) )
+  .then( TE.enterResponse.bind(TE, '- Meme-Me (A CLI for generating memes) ') )
+  
+.then( TE.reset.bind(TE) );
