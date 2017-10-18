@@ -145,4 +145,3 @@ TE.wait(1000, false)
   .then( TE.wait.bind(TE, 2000) )
   .then( TE.enterResponse.bind(TE, 'I am a self-proclaimed geek. My powers? Am good at parsing jq, awesome in bash and the best, I make terrible decisions and can not keep my mouth shut. I know Bash, Python, C++, C#, HTML, CSS and am on the verge of learning Kotlin.') )
   .then( TE.reset.bind(TE) );
-
