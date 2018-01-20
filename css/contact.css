@@ -19,7 +19,7 @@ body {
 	font-size: 12px;
 	line-height:30px;
 	color:#777;
-	background: rgb(52, 152, 219);
+	background: #373B44;
 }
 
 .container {
@@ -38,7 +38,7 @@ body {
 }
 
 #contact h3 {
-	color: #F96;
+	color: rgb(52, 152, 219);
 	font-size: 3em;
   display: block;
 	font-weight: 300;
@@ -83,7 +83,7 @@ fieldset {
 	cursor:pointer;
 	width:100%;
 	border:none;
-	background:rgb(52, 152, 219);
+	background:#373B44;
 	color:#FFF;
 	margin:0 0 5px;
 	padding:10px;
