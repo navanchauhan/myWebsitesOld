@@ -12,8 +12,27 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/** An empty service worker! */
+
+self.addEventListener('install', function(e) {
+  e.waitUntil(
+    caches.open('your-magic-cache').then(function(cache) {
+      return cache.addAll([
+        '/',
+        '/index.html',
+        '/Contact.html',
+        '/404.html',
+        '/css/*',
+        '/js/*',
+        '/mjolnir/*',
+      ]);
+    })
+  );
+});
 
 self.addEventListener('fetch', function(event) {
-  /** An empty fetch handler! */
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    })
+  );
 });
