@@ -1,0 +1,17 @@
+{
+  "name"              : "Navan Chauhan",
+  "short_name"        : "Navan's Repo",
+  "description"       : "A personal portfolio and also a guide for all personal GitHub Projects",
+  "start_url"         : "/",
+  "display"           : "standalone",
+  "orientation"       : "any",
+  "background_color"  : "#373B44",
+  "theme_color"       : "#373B44",
+  "icons": [
+    {
+      "src"           : "logo-420.png",
+      "sizes"         : "420x420",
+      "type"          : "image/png"
+    }
+  ]
+}
