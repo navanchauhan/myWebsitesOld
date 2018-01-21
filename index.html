@@ -1,1 +1,70 @@
-<!DOCTYPE html><html lang=en><script>"serviceWorker"in navigator&&window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").then(function(e){console.log("ServiceWorker registration successful with scope: ",e.scope)},function(e){console.log("ServiceWorker registration failed: ",e)})})</script><meta charset=UTF-8><meta content=origin name=referrer><meta content="Hi! This is my personal website and it also houses comprehensive guides about my projects"name=Description><meta content="width=device-width,initial-scale=1,minimal-ui"name=viewport><link href=manifest.json rel=manifest><link href=css/menu.css rel=stylesheet><meta content=#373B44 name=theme-color><link href=assets/apple-icon-57x57.png rel=apple-touch-icon sizes=57x57><link href=assets/apple-icon-60x60.png rel=apple-touch-icon sizes=60x60><link href=assets/apple-icon-72x72.png rel=apple-touch-icon sizes=72x72><link href=assets/apple-icon-76x76.png rel=apple-touch-icon sizes=76x76><link href=assets/apple-icon-114x114.png rel=apple-touch-icon sizes=114x114><link href=assets/apple-icon-120x120.png rel=apple-touch-icon sizes=120x120><link href=assets/apple-icon-144x144.png rel=apple-touch-icon sizes=144x144><link href=assets/apple-icon-152x152.png rel=apple-touch-icon sizes=152x152><link href=assets/apple-icon-180x180.png rel=apple-touch-icon sizes=180x180><link href=assets/android-icon-192x192.png rel=icon sizes=192x192 type=image/png><link href=assets/favicon-32x32.png rel=icon sizes=32x32 type=image/png><link href=assets/favicon-96x96.png rel=icon sizes=96x96 type=image/png><link href=assets/favicon-16x16.png rel=icon sizes=16x16 type=image/png><link href=/manifest.json rel=manifest><meta content=#373B44 name=msapplication-TileColor><meta content=assets/ms-icon-144x144.png name=msapplication-TileImage><script async src="https://www.googletagmanager.com/gtag/js?id=UA-108635191-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-108635191-1")</script><title>Hi!</title><body><style>*{box-sizing:border-box}body{margin:0;font-weight:500;font-family:HelveticaNeue}section{width:100%;padding:0 7%;display:table;margin:0;max-width:none;background-color:#373b44;height:100vh}section:nth-of-type(2n){background-color:#3498db}.intro{height:90vh}.content{display:table-cell;vertical-align:middle}h1{font-size:3em;display:block;color:#fff;font-weight:300}p{font-size:1.5em;font-weight:500;color:#c3cad9}a{font-weight:700;color:#373b44;position:relative}a:hover{opacity:.8}a:active{top:1px}footer{padding:1% 5%;text-align:center;background-color:#373b44;color:#fff}footer a{color:#fe4b74;font-weight:500;text-decoration:none}@-webkit-keyframes letter-in{0%{top:1.2em}100%{top:0}}@keyframes letter-in{0%{top:1.2em}100%{top:0}}@-webkit-keyframes letter-out{0%{top:0}100%{top:-1.2em}}@keyframes letter-out{0%{top:0}100%{top:-1.2em}}div.changing-title{font-size:8vw;height:1.2em;position:relative;width:100%;overflow-y:hidden;margin-left:1em;transform:translate3d(0,0,0)}div.changing-title h1{font-size:1em;position:absolute;left:0;top:0;margin:0}div.changing-title h1 .letter{position:relative;top:1.2em}div.changing-title h1 .letter.in{-webkit-animation-name:letter-in;animation-name:letter-in;-webkit-animation-duration:.3s;animation-duration:.3s;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards}div.changing-title h1 .letter.out{top:0;-webkit-animation-name:letter-out;animation-name:letter-out;-webkit-animation-duration:.3s;animation-duration:.3s;-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards} #cssmenu,</style><div id=cssmenu><ul><li><a href=#>Home</a><li class=active><a href=#>Projects</a><ul><li><a href=https://navanchauhan.github.io/Mjolnir>Mjölnir</a><li><a href=https://navanchauhan.github.io/Grub-Repair-Toolkit>GYGB</a></ul><li><a href=./Contact.html>Contact</a></ul></div><script async src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js></script><script async src=js/index.js></script><script async src=js/menu.js></script><section class=intro><div class=content><div class=changing-title><h1>Hi! I am Navan</h1></div></div></section><section><div class=content><h1>I started coding when I was 8 and ironically learnt C before HTML</h1></div></section><section><div class=content><h1>Funnily, I learnt C# before HTML</h1></div></section><section><div class=content><h1>See my <a href=https://github.com/navanchauhan>GitHub Repo.</a></h1></div></section><footer>Helped by countless designers, check source code for more info</footer>
+<!DOCTYPE html>
+<html lang="en" class="gr__navanchauhan_github_io"><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script>(function main() {
+    // Create enabled event
+    function fireEnabledEvent() {
+        // If gli exists, then we are already present and shouldn't do anything
+        if (!window.gli) {
+            setTimeout(function () {
+                var enabledEvent = document.createEvent("Event");
+                enabledEvent.initEvent("WebGLEnabledEvent", true, true);
+                document.dispatchEvent(enabledEvent);
+            }, 0);
+        } else {
+            //console.log("WebGL Inspector already embedded on the page - disabling extension");
+        }
+    };
+
+    // Grab the path root from the extension
+    document.addEventListener("WebGLInspectorReadyEvent", function (e) {
+        var pathElement = document.getElementById("__webglpathroot");
+        if (window["gliloader"]) {
+            gliloader.pathRoot = pathElement.innerText;
+        } else {
+            // TODO: more?
+            window.gliCssUrl = pathElement.innerText + "gli.all.css";
+        }
+    }, false);
+
+    // Rewrite getContext to snoop for webgl
+    var originalGetContext = HTMLCanvasElement.prototype.getContext;
+    if (!HTMLCanvasElement.prototype.getContextRaw) {
+        HTMLCanvasElement.prototype.getContextRaw = originalGetContext;
+    }
+    HTMLCanvasElement.prototype.getContext = function () {
+        var ignoreCanvas = this.internalInspectorSurface;
+        if (ignoreCanvas) {
+            return originalGetContext.apply(this, arguments);
+        }
+
+        var result = originalGetContext.apply(this, arguments);
+        if (result == null) {
+            return null;
+        }
+
+        var contextNames = ["moz-webgl", "webkit-3d", "experimental-webgl", "webgl", "3d"];
+        var requestingWebGL = contextNames.indexOf(arguments[0]) != -1;
+        if (requestingWebGL) {
+            // Page is requesting a WebGL context!
+            fireEnabledEvent(this);
+
+            // If we are injected, inspect this context
+            if (window.gli) {
+                if (gli.host.inspectContext) {
+                    // TODO: pull options from extension
+                    result = gli.host.inspectContext(this, result);
+                    // NOTE: execute in a timeout so that if the dom is not yet
+                    // loaded this won't error out.
+                    window.setTimeout(function() {
+                        var hostUI = new gli.host.HostUI(result);
+                        result.hostUI = hostUI; // just so we can access it later for debugging
+                    }, 0);
+                }
+            }
+        }
+
+        return result;
+    };
+})();</script><head><meta charset="UTF-8"><meta content="origin" name="referrer"><meta content="Hi! This is my personal website and it also houses comprehensive guides about my projects" name="Description"><meta content="width=device-width,initial-scale=1,minimal-ui" name="viewport"><link href="manifest.json" rel="manifest"><link href="css/menu.css" rel="stylesheet"><meta content="#373B44" name="theme-color"><link href="assets/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57"><link href="assets/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60"><link href="assets/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"><link href="assets/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76"><link href="assets/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"><link href="assets/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120"><link href="assets/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144"><link href="assets/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152"><link href="assets/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"><link href="assets/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png"><link href="assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"><link href="assets/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"><link href="assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"><link href="/manifest.json" rel="manifest"><meta content="#373B44" name="msapplication-TileColor"><meta content="assets/ms-icon-144x144.png" name="msapplication-TileImage"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-108635191-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-108635191-1")</script><title>Hi!</title></head><body data-gr-c-s-loaded="true"><style>*{box-sizing:border-box}body{margin:0;font-weight:500;font-family:HelveticaNeue}section{width:100%;padding:0 7%;display:table;margin:0;max-width:none;background-color:#373b44;height:100vh}section:nth-of-type(2n){background-color:#3498db}.intro{height:90vh}.content{display:table-cell;vertical-align:middle}h1{font-size:3em;display:block;color:#fff;font-weight:300}p{font-size:1.5em;font-weight:500;color:#c3cad9}a{font-weight:700;color:#373b44;position:relative}a:hover{opacity:.8}a:active{top:1px}footer{padding:1% 5%;text-align:center;background-color:#373b44;color:#fff}footer a{color:#fe4b74;font-weight:500;text-decoration:none}@-webkit-keyframes letter-in{0%{top:1.2em}100%{top:0}}@keyframes letter-in{0%{top:1.2em}100%{top:0}}@-webkit-keyframes letter-out{0%{top:0}100%{top:-1.2em}}@keyframes letter-out{0%{top:0}100%{top:-1.2em}}div.changing-title{font-size:8vw;height:1.2em;position:relative;width:100%;overflow-y:hidden;margin-left:1em;transform:translate3d(0,0,0)}div.changing-title h1{font-size:1em;position:absolute;left:0;top:0;margin:0}div.changing-title h1 .letter{position:relative;top:1.2em}div.changing-title h1 .letter.in{-webkit-animation-name:letter-in;animation-name:letter-in;-webkit-animation-duration:.3s;animation-duration:.3s;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards}div.changing-title h1 .letter.out{top:0;-webkit-animation-name:letter-out;animation-name:letter-out;-webkit-animation-duration:.3s;animation-duration:.3s;-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards} #cssmenu,</style><div id="cssmenu"><div id="menu-button">Menu</div><ul style="display: block;"><li><a href="#">Home</a></li><li class="active has-sub"><span class="submenu-button"></span><a href="#">Projects</a><ul style="display: block;"><li><a href="https://navanchauhan.github.io/Mjolnir">Mjölnir</a></li><li><a href="https://navanchauhan.github.io/Grub-Repair-Toolkit">GYGB</a></li></ul></li><li><a href="./Contact.html">Contact</a></li></ul></div><script async="" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script><script async="" src="js/index.js"></script><script async="" src="js/menu.js"></script><section class="intro"><div class="content"><div class="changing-title"><h1 class=""><span class="letter out" style="animation-delay: 0s;">H</span><span class="letter out" style="animation-delay: 0.1s;">i</span><span class="letter out" style="animation-delay: 0.2s;">!</span><span class="letter out" style="animation-delay: 0.3s;"> </span><span class="letter out" style="animation-delay: 0.4s;">I</span><span class="letter out" style="animation-delay: 0.5s;"> </span><span class="letter out" style="animation-delay: 0.6s;">a</span><span class="letter out" style="animation-delay: 0.7s;">m</span><span class="letter out" style="animation-delay: 0.8s;"> </span><span class="letter out" style="animation-delay: 0.9s;">न</span><span class="letter out" style="animation-delay: 1s;">व</span><span class="letter out" style="animation-delay: 1.1s;">न</span></h1><h1 class="current"><span class="letter in" style="animation-delay: 0.5s;">H</span><span class="letter in" style="animation-delay: 0.6s;">i</span><span class="letter in" style="animation-delay: 0.7s;">!</span><span class="letter in" style="animation-delay: 0.8s;"> </span><span class="letter in" style="animation-delay: 0.9s;">I</span><span class="letter in" style="animation-delay: 1s;"> </span><span class="letter in" style="animation-delay: 1.1s;">a</span><span class="letter in" style="animation-delay: 1.2s;">m</span><span class="letter in" style="animation-delay: 1.3s;"> </span><span class="letter in" style="animation-delay: 1.4s;">न</span><span class="letter in" style="animation-delay: 1.5s;">व</span><span class="letter in" style="animation-delay: 1.6s;">न</span></h1></div></div></section><section><div class="content"><h1>I started coding when I was 8 and ironically learnt C before HTML</h1></div></section><section><div class="content"><h1>Funnily, I learnt C# before HTML</h1></div></section><section><div class="content"><h1>See my <a href="https://github.com/navanchauhan">GitHub Repo.</a></h1></div></section><footer>Helped by countless designers, check source code for more info</footer>
+
+  <script>"serviceWorker"in navigator&&window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").then(function(e){console.log("ServiceWorker registration successful with scope: ",e.scope)},function(e){console.log("ServiceWorker registration failed: ",e)})})</script>
+  </body></html>
