@@ -8,19 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="manifest" href="manifest.json" />
 <meta name="theme-color" content="#373B44">
-<script>
-  if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-  </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108635191-1"></script>
 <script>
