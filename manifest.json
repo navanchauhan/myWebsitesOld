@@ -7,8 +7,8 @@
   "background_color": "#111111",
   "icons": [
     {
-      "src": "icon-192.png",
-      "sizes": "192x192",
+      "src": "icon-420.png",
+      "sizes": "420x420",
       "type": "image/png"
     }
   ]
