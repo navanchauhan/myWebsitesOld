@@ -43,6 +43,11 @@
    "sizes": "192x192",
    "type": "image/png",
    "density": "4.0"
-  }
+  },
+	{
+"src": "assets/520x520.png",
+"sizes": "520x520",
+"type": "image/png"
+}
   ]
 }
