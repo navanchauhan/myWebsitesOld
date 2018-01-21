@@ -20,13 +20,14 @@
 </script>
 
   <title>Hi!</title>
-      <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <!-- Menu by Captain Anonymous who forked it from Dmitry Kiselyov-->
   <div id='cssmenu'>
     <style>
+      
+      
       @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 #cssmenu,
 #cssmenu ul,
@@ -354,6 +355,150 @@
     display: none;
   }
 }
+      * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-weight: 500;
+  font-family: 'HelveticaNeue';
+}
+
+section {
+  width: 100%;
+  padding: 0 7%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  background-color: #373B44;
+  height: 100vh;
+}
+section:nth-of-type(2n) {
+  background-color: rgb(52, 152, 219);
+}
+
+.intro {
+  height: 90vh;
+}
+
+.content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 3em;
+  display: block;
+  color: white;
+  font-weight: 300;
+}
+
+p {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #C3CAD9;
+}
+
+a {
+  font-weight: 700;
+  color: #373B44;
+  position: relative;
+}
+a:hover {
+  opacity: 0.8;
+}
+a:active {
+  top: 1px;
+}
+
+footer {
+  padding: 1% 5%;
+  text-align: center;
+  background-color: #373B44;
+  color: white;
+}
+footer a {
+  color: #FE4B74;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+@-webkit-keyframes letter-in {
+  0% {
+    top: 1.2em;
+  }
+  100% {
+    top: 0em;
+  }
+}
+
+@keyframes letter-in {
+  0% {
+    top: 1.2em;
+  }
+  100% {
+    top: 0em;
+  }
+}
+@-webkit-keyframes letter-out {
+  0% {
+    top: 0em;
+  }
+  100% {
+    top: -1.2em;
+  }
+}
+@keyframes letter-out {
+  0% {
+    top: 0em;
+  }
+  100% {
+    top: -1.2em;
+  }
+}
+div.changing-title {
+  font-size: 8vw;
+  height: 1.2em;
+  position: relative;
+  width: 100%;
+  overflow-y: hidden;
+  margin-left: 1em;
+   transform: translate3d(0, 0, 0);
+}
+div.changing-title h1 {
+  font-size: 1em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+}
+div.changing-title h1 .letter {
+  position: relative;
+  top: 1.2em;
+}
+div.changing-title h1 .letter.in {
+  -webkit-animation-name: letter-in;
+          animation-name: letter-in;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+div.changing-title h1 .letter.out {
+  top: 0em;
+  -webkit-animation-name: letter-out;
+          animation-name: letter-out;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
       </style>
 <ul>
    <li><a href='#'>Home</a></li>
