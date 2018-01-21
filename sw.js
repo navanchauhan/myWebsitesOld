@@ -4,7 +4,7 @@ self.addEventListener('install', function(e) {
 
 e.waitUntil(
 
-caches.open('Navan-Chauhan').then(function(cache) {
+caches.open('Navan Chauhan').then(function(cache) {
 
 return cache.addAll([
 
