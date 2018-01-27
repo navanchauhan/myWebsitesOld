@@ -7,18 +7,8 @@
   max-width: 700px;
   position: relative;
 }
-.timeline__content-title {
-  font-weight: normal;
-  font-size: 66px;
-  margin: -10px 0 0 0;
-  transition: .4s;
-  padding: 0 10px;
-  box-sizing: border-box;
-  font-family: "Pathway Gothic One", sans-serif;
-  color: #fff;
-}
 .timeline__content-desc {
-  margin: 0;
+  margin: 1;
   font-size: 15px;
   box-sizing: border-box;
   color: rgba(255, 255, 255, 0.7);
@@ -110,8 +100,10 @@
   }
 }
 .timeline__img {
-  max-width: 100%;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  height: 7.9cm;
+  width: 7.9cm;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .timeline-container {
   width: 100%;
@@ -152,12 +144,47 @@
   font-weight: normal;
 }
 
-.demo-footer {
-  padding: 60px 0;
-  text-align: center;
+
+/* Start Polaroid frame and frame texture ---------- */
+.bg-img {
+  border: 10px solid #eeeeee;
+  border-bottom: 80px solid #eeeeee;
+  border-width:10%;
+  border-image: url("http://www.designbolts.com/wp-content/uploads/2013/02/Noise-Light-Grey-Tileable-Pattern-For-Website-Background.jpg") 30 30 95 30 repeat !important;
+   z-index: 9.0;
+  -webkit-box-shadow: 15px 15px 15px #777;
+  -moz-box-shadow: 13px 13px 13px #777;
+  /* box-shadow: 10px 8px 50px #000; */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  background-size: cover;
+	margin:auto;
+  height: 7.9cm;
+  width: 7.9cm;
+	align-content: left;
+  align: left;
 }
-.demo-footer a {
-  color: #999;
-  display: inline-block;
-  font-family: Cardo;
+
+
+/* The image in your polaroid ---------- */
+
+
+/* Handwritten Text at the bottom of your polaroid ---------- */
+.text{
+  color:#000;
+  margin-top:0px;
+  padding:auto;
+  font-weight: normal;
+  font-size: 66px;
+  transition: .4s;
+  box-sizing: border-box;
+  font-family: "Pathway Gothic One", sans-serif;
+
+
+  text-align:center;
+  display:block;
+  background-color: transparent;
+  border: 1px solid transparent;
+  margin-right: 10px;
+  margin-bottom: 1px;
+  float:left;
 }
