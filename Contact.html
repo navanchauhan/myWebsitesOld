@@ -26,30 +26,15 @@
 </head>
 
 <body>
-  <!-- Menu by Captain Anonymous who forked it from Dmitry Kiselyov-->
-  <div id='cssmenu'>
-  <ul>
-   <li><a href='https://navanchauhan.github.io'>Home</a></li>
-   <li class='active'><a href='#'>Projects</a>
-      <ul>
-         <li><a href='https://navanchauhan.github.io/Mjolnir'>Mjölnir</a>
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+  <div w3-include-html="https://navanchauhan.me/menu.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/menu.js"></script>
 
-         </li>
-         <li><a href='https://navanchauhan.github.io/Grub-Repair-Toolkit'>GYGB</a>
-
-         </li>
-      </ul>
-   </li>
-   </li>
-   <li><a href='#'>Contact</a></li>
-  </ul>
   </div>
-  <script src='js/jquery.min.js'></script>
-
-
-
-    <script  src="js/menu.js"></script>
-
+  <script>
+  w3.includeHTML();
+  </script>
   <div class="container">
   <form id="contact" action="http://formspree.io/navanchauhan@gmail.com" method="post">
     <h3>Quick Contact</h3>
