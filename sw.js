@@ -8,7 +8,9 @@ caches.open('Navan Chauhan').then(function(cache) {
 
 return cache.addAll([
 
-'/',
+'/css/',
+  
+  '/js/',
 
 '/index.html',
 
