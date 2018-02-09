@@ -5,6 +5,16 @@
   <div w3-include-html="https://navanchauhan.me/toolbar">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
   </div>
+  <script
+    src="https://unpkg.com/material-components-web@0.9.1/dist/material-components-web.min.js">
+  </script>
+  <script>
+    mdc.autoInit()
+    document.getElementById('shrine-nav-icon').addEventListener('click', function(evt) {
+      evt.preventDefault();
+      document.getElementById('shrine-nav-menu').MDCTemporaryDrawer.open = true;
+    });
+  </script>
   <script>
   w3.includeHTML();
   </script>
