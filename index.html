@@ -34,10 +34,10 @@
 </head>
 
 <body>
-<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script src="https://www.w3schools.com/lib/w3.js" async></script>
   <div w3-include-html="https://navanchauhan.me/menu.html">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./js/menu.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script>
+    <script src="./js/menu.js" async></script>
 
   </div>
   <script>
@@ -104,7 +104,7 @@
   </div>
 </div>
 
-<script>
+<script async>
 if('serviceWorker' in navigator) {
   navigator.serviceWorker
            .register('/sw.js')
@@ -112,7 +112,7 @@ if('serviceWorker' in navigator) {
 }
 </script>
 
-    <script  src="js/timeline.js"></script>
+    <script  src="js/timeline.js" async></script>
 
 
 
