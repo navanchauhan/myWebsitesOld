@@ -14,7 +14,8 @@ return cache.addAll([
   'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css',
   'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css',
   'https://www.w3schools.com/lib/w3.js',
-  
+  '/js/jquery.min.js',
+  '/css/404.css',
   '/js/menu.js',
   'css/style.css',
   'css/timeline.css',
