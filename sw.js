@@ -20,29 +20,24 @@ return cache.addAll([
 '/Contact.html',
 '/projects.html',
 
-'/404.html',
+'/404.html'
 
 
 ]);
 
-})
-
-);
-
+.then(() => self.skipWaiting());
+    })
+  )
 });
 
-self.addEventListener('fetch', function(event) {
+self.addEventListener('activate',  event => {
+  event.waitUntil(self.clients.claim());
+});
 
-console.log(event.request.url);
-
-event.respondWith(
-
-caches.match(event.request).then(function(response) {
-
-return response || fetch(event.request);
-
-})
-
-);
-
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request, {ignoreSearch:true}).then(response => {
+      return response || fetch(event.request);
+    })
+  );
 });
