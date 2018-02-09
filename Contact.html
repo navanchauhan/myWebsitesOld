@@ -34,7 +34,7 @@
   </script>
  
   
-  <main>
+<div>
     <fieldset style="width:25%; background-color: white; margin: auto;">
 
       <form id="contact" action="https://formspree.io/navanchauhan@gmail.com" method="post">
@@ -59,8 +59,8 @@
         <input type="text" name="_gotcha" style="display:none" />
               <input type="hidden" name="_subject" value="New submission!" />
         <div class="mdc-text-field--textarea">
-          <textarea name="message" tabindex="3" id="textarea" class="mdc-text-field__input" rows="8" cols="40"></textarea>
-          <label for="textarea" class="mdc-text-field__label">Type Your Message Here..</label>
+          <textarea name="message" tabindex="3" id="textarea" class="mdc-text-field__input" rows="8" cols="40" placeholder="Type Ypur Message Here..."></textarea>
+          
 
         </div>
 
@@ -76,16 +76,14 @@
     </fieldset>
     <!-- The p element below is where we'll eventually output our greeting -->
 
-  </main>
 
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.js"></script>
   <script>
     window.mdc.autoInit();
   </script>
-
+</div>
 </body>
 
 
-</body>
 
 </html>
