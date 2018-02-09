@@ -8,14 +8,17 @@ caches.open('Navan Chauhan').then(function(cache) {
 
 return cache.addAll([
 
-'/css/',
+'/css/menu.css',
   
-  '/js/',
+  '/js/menu.js',
+  'css/style.css',
+  'css/timeline.css',
+  '/js/timeline.js',
 
 '/index.html',
 
 '/Contact.html',
-
+'/projects.html',
 
 '/404.html',
 
