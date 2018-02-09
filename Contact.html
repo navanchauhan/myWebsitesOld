@@ -1,65 +1,107 @@
-<!DOCTYPE html>
-<html lang="en" >
-
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="referrer" content="origin" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108635191-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Projects by Navan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projects made by Navan Chauhan (N3V0N/TheFox)"/>
+  <link rel="icon" sizes="192x192" href="https://material.io/static/images/simple-lp/favicons/components-192x192.png">
+  <link rel="shortcut icon" href="https://material.io/static/images/simple-lp/favicons/components-72x72.png">
 
-  gtag('config', 'UA-108635191-1');
-</script>
-
-  <title>Contact Me</title>
-      <link rel="stylesheet" href="css/contact.css">
-
-
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet"
+        href="https://unpkg.com/material-components-web@0.9.1/dist/material-components-web.min.css">
+  <link rel="stylesheet" href="app.css">
 </head>
+<body class="mdc-typography">
+  <header id="shrine-header"
+          class="mdc-toolbar mdc-toolbar--fixed mdc-theme--text-primary-on-background">
+    <div class="mdc-toolbar__row">
+      <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+        <a id="shrine-nav-icon" class="material-icons mdc-ripple-surface" href="#"
+           aria-label="Click to show the navigation menu"
+           aria-controls="shrine-nav-menu"
+           data-mdc-auto-init="MDCRipple"
+           data-mdc-ripple-is-unbounded>menu</a>
+        <h1 id="shrine-logo" class="mdc-toolbar__title"><span>Navan Chauhan</span></h1>
+      </section>
+    </div>
+  </header>
 
-<body>
-  <script src="https://www.w3schools.com/lib/w3.js"></script>
-  <div w3-include-html="https://navanchauhan.me/menu.html">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
-    <script src="js/menu.js"></script>
+  <aside id="shrine-nav-menu" class="mdc-temporary-drawer" data-mdc-auto-init="MDCTemporaryDrawer">
+    <nav class="mdc-temporary-drawer__drawer">
+      <header class="mdc-temporary-drawer__header"></header>
+      <nav class="mdc-temporary-drawer__content mdc-list">
+        <a class="mdc-list-item" href="https://navanchauhan.github.io">Home</a>
+        <a class="mdc-list-item" href="#">Projects</a>
+        <a class="mdc-list-item" href="https://navanchauhan.github.io/Contact.html">Contact Me</a>
+      </nav>
+    </nav>
+  </aside>
 
-  </div>
-  <script>
-  w3.includeHTML();
+  <main id="shrine-products" class="mdc-layout-grid mdc-toolbar-fixed-adjust">
+    <div class="mdc-layout-grid__cell">
+      <div class="mdc-card shrine-product-card"><a alt="GitHub Repo" href="https://navanchauhan.me/Mjolnir">
+        <section class="mdc-card__primary">
+          <span class="mdc-card__title shrine-product-card__price">Mjölnir</span>
+        </section>
+        <img class="shrine-product-card__image" width="240" height="240" alt="DoS Tool" src="https://camo.githubusercontent.com/b5d74d59b944fcebd54050a16cc6f08a681a5383/68747470733a2f2f7669676e657474652e77696b69612e6e6f636f6f6b69652e6e65742f636c756270656e6775696e2f696d616765732f652f65612f353135355f69636f6e2e706e672f7265766973696f6e2f6c61746573743f63623d3230313230363136313035383537">
+      </a></div>
+    </div>
+    <div class="mdc-layout-grid__cell">
+      <div class="mdc-card shrine-product-card"><a alt="GitHub Repo" href="https://navanchauhan.me/Grub-Repair-Toolkit">
+        <section class="mdc-card__primary">
+          <span class="mdc-card__title shrine-product-card__price">GYGB</span>
+        </section>
+        <img class="shrine-product-card__image" width="240" height="240" alt="GYGB" src="https://dummyimage.com/240x240/ffffff/000000.jpg&text=To+Be+Replaced">
+      </div></a>
+    </div>
+    <div class="mdc-layout-grid__cell">
+      <div class="mdc-card shrine-product-card"><a alt="GitHub Repo" href="https://navanchauhan.me/John-Doe">
+        <section class="mdc-card__primary">
+          <span class="mdc-card__title shrine-product-card__price">John Doe</span>
+        </section>
+        <img class="shrine-product-card__image" width="240" height="240" alt="Beach ball" src="https://dummyimage.com/240x240/ffffff/000000.jpg&text=To+Be+Replaced">
+      </div>
+    </div></a>
+    <div class="mdc-layout-grid__cell">
+      <div class="mdc-card shrine-product-card"><a alt="GitHub Repo" href="https://navanchauhan.me/Pwned">
+        <section class="mdc-card__primary">
+          <span class="mdc-card__title shrine-product-card__price">Pwned</span>
+        </section>
+        <img class="shrine-product-card__image" width="240" height="240" alt="Backpack" src="https://dummyimage.com/240x240/ffffff/000000.jpg&text=To+Be+Replaced">
+      </div></a>
+    </div>
+    <div class="mdc-layout-grid__cell">
+      <div class="mdc-card shrine-product-card">
+        <section class="mdc-card__primary"><a alt="GitHub Repo" href="https://navanchauhan.me/Kamikaze">
+          <span class="mdc-card__title shrine-product-card__price">Kamikaze</span>
+        </section>
+        <img class="shrine-product-card__image" width="240" height="240" alt="Clock" src="https://dummyimage.com/240x240/ffffff/000000.jpg&text=To+Be+Replaced">
+      </div></a>
+    </div>
+    <div class="mdc-layout-grid__cell">
+      <div class="mdc-card shrine-product-card">
+        <section class="mdc-card__primary"><a alt="GitHub Repo" href="https://navanchauhan.me/Showdown">
+          <span class="mdc-card__title shrine-product-card__price">Shodown</span>
+        </section>
+        <img class="shrine-product-card__image" width="240" height="240" alt="Fish bowl" src="https://dummyimage.com/240x240/ffffff/000000.jpg&text=To+Be+Replaced">
+      </div></a>
+    </div>
+  </main>
+  <script
+    src="https://unpkg.com/material-components-web@0.9.1/dist/material-components-web.min.js">
   </script>
-  <div class="container">
-  <form id="contact" action="https://formspree.io/navanchauhan@gmail.com" method="post">
-    <h3>Quick Contact</h3>
-    <h4>Contact me today, and get a reply within 24 hours!</h4>
-    <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1" name="Name" required autofocus>
-      <input type="text" name="_gotcha" style="display:none" />
-      <input type="hidden" name="_subject" value="New submission!" />
-      <input type="hidden" name="_next" value="https://navanchauhan.github.io/Thanks.html" />
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your Email Address" type="email" tabindex="2" name="_replyto" required>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your Phone Number" type="tel" tabindex="3" name="Phone Number" >
-    </fieldset>
-    <fieldset>
-      <textarea placeholder="Type your Message Here...." tabindex="4" name="Message" required></textarea>
-    </fieldset>
-    <fieldset>
-      <button name="submit" type="submit" value="Send" id="contact-submit" data-submit="...Sending">Submit</button>
-    </fieldset>
-  </form>
-
-
-</div>
-
-
-
+  <script>
+    mdc.autoInit()
+    document.getElementById('shrine-nav-icon').addEventListener('click', function(evt) {
+      evt.preventDefault();
+      document.getElementById('shrine-nav-menu').MDCTemporaryDrawer.open = true;
+    });
+  </script>
 </body>
-
 </html>
