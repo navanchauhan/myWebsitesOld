@@ -16,12 +16,13 @@
 </script>
 
   <title>Contact Me</title>
-      <link rel="stylesheet" href="css/contact.css">
+      <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.css">
+
 
 
 </head>
 
-<body>
+<body class="mdc-typography" style="background: #2196F3;">
   <script src="https://www.w3schools.com/lib/w3.js"></script>
   <div w3-include-html="https://navanchauhan.me/menu.html">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
@@ -31,33 +32,58 @@
   <script>
   w3.includeHTML();
   </script>
-  <div class="container">
-  <form id="contact" action="https://formspree.io/navanchauhan@gmail.com" method="post">
-    <h3>Quick Contact</h3>
-    <h4>Contact me today, and get a reply within 24 hours!</h4>
-    <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1" name="Name" required autofocus>
-      <input type="text" name="_gotcha" style="display:none" />
-      <input type="hidden" name="_subject" value="New submission!" />
-      <input type="hidden" name="_next" value="https://navanchauhan.github.io/Thanks.html" />
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your Email Address" type="email" tabindex="2" name="_replyto" required>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your Phone Number" type="tel" tabindex="3" name="Phone Number" >
-    </fieldset>
-    <fieldset>
-      <textarea placeholder="Type your Message Here...." tabindex="4" name="Message" required></textarea>
-    </fieldset>
-    <fieldset>
-      <button name="submit" type="submit" value="Send" id="contact-submit" data-submit="...Sending">Submit</button>
-    </fieldset>
-  </form>
+ 
+  
+  <main>
+    <fieldset style="width:25%; background-color: white; margin: auto;">
 
+      <form id="contact" action="https://formspree.io/navanchauhan@gmail.com" method="post">
+        <div class="mdc-form-field">
+          <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+            <input name="Name" tabindex="1" id="name" type="text" class="mdc-text-field__input" size="100%">
+            <label for="name" class="mdc-text-field__label">
+            Name
+          </label>
+            <div class="mdc-line-ripple"></div>
+          </div>
+        </div>
+        <br>
+        <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+          <input name="_replyto" tabindex="2" id="email" type="text" class="mdc-text-field__input" size="100%" type="email">
+          <label for="email" class="mdc-text-field__label">
+    Email
+  </label>
+          <div class="mdc-line-ripple"></div>
+        </div>
+        </div>
+        <input type="text" name="_gotcha" style="display:none" />
+              <input type="hidden" name="_subject" value="New submission!" />
+        <div class="mdc-text-field--textarea">
+          <textarea name="message" tabindex="3" id="textarea" class="mdc-text-field__input" rows="8" cols="40"></textarea>
+          <label for="textarea" class="mdc-text-field__label">Type Your Message Here..</label>
 
-</div>
+        </div>
 
+        </div>
+        <div>
+          <button type="submit" class="mdc-button
+                   mdc-button--raised
+                   mdc-ripple-surface" data-mdc-auto-init="MDCRipple" style="margin: auto; display: block;">
+      Submit
+    </button>
+      </form>
+
+    </fieldset>
+    <!-- The p element below is where we'll eventually output our greeting -->
+
+  </main>
+
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.js"></script>
+  <script>
+    window.mdc.autoInit();
+  </script>
+
+</body>
 
 
 </body>
