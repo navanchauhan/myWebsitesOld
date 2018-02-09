@@ -16,7 +16,8 @@ return cache.addAll([
   '/js/timeline.js',
 
 '/index.html',
-
+'/css/contact.css',
+  
 '/Contact.html',
 '/projects.html',
 
