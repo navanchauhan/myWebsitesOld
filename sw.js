@@ -24,20 +24,23 @@ return cache.addAll([
 
 
 ]);
+})
 
-.then(() => self.skipWaiting());
-    })
-  )
+);
+
 });
+self.addEventListener('fetch', function(event) {
 
-self.addEventListener('activate',  event => {
-  event.waitUntil(self.clients.claim());
-});
+console.log(event.request.url);
 
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request, {ignoreSearch:true}).then(response => {
-      return response || fetch(event.request);
-    })
-  );
+event.respondWith(
+
+caches.match(event.request).then(function(response) {
+
+return response || fetch(event.request);
+
+})
+
+);
+
 });
