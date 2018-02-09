@@ -14,13 +14,9 @@ return cache.addAll([
 
 '/Contact.html',
 
-'/css/*',
-
-'/js/*',
 
 '/404.html',
 
-'/*.png'
 
 ]);
 
